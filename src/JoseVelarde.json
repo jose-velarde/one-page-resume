@@ -1,0 +1,191 @@
+{
+	"Contact": {
+		"Name": "José",
+		"Last Name": "Velarde",
+		"Title": "Electronics Engineer",
+		"Profession": "Frontend Developer",
+		"City": "Salta, Argentina",
+		"Phone": "+55 12-98186-5664",
+		"Email": "josevelarde00@gmail.com",
+		"Website": "jose-velarde.github.io",
+		"Github": "jose-velarde",
+		"Linkedin": "jose-velarde"
+	},
+
+	"Summary": "Electronic Engineer from the National University of Córdoba, Argentina. I am concluding a master's degree at the National Institute for Space Research (INPE, Brazil), where I work in the processing of satellite data and the design of a computer vision software to the research optical phenomena in the upper atmosphere, using Python. My professional goal is to gain experience in software and hardware design, and in the future, learn about Artificial Intelligence and Machine Learning.",
+
+	"Education": [
+		{
+			"ID" : "1",
+			"Institution": "National Institute for Space Research - INPE",
+			"Degree": "Space Science MSc",
+			"Location": "São Paulo - Brazil",
+			"Date": "2019 - Present",
+			"Items":[
+				"I participated in the organization of the \"INPE Space Physics Mini-school\" in 2019.",
+				"I participated in two research campaigns."
+			]
+		},
+		{
+			"ID" : "2",
+			"Institution": "National University of Córdoba - UNC",
+			"Degree": "Electronics Engineer",
+			"Location": "Córdoba - Argentina",
+			"Date": "2006 - 2019",
+			"Items":[
+				"I participated in an international research campaign during the development of my thesis."
+			]
+		},
+		{
+			"ID" : "3",
+			"Institution": "Vocational School Nº3138",
+			"Degree": "Electronics Technician",
+			"Location": "Salta - Argentina",
+			"Date": "2003 - 2005",
+			"Items":[
+				"I studied double shift course for three years, performing various laboratory practices."
+			]
+		}
+	],
+	"Experience": [
+		{	
+			"ID":"1",
+			"Organization": "National Institute for Space Research ‑ INPE",
+			"Job Title": "CNPq Scholarship Student - Space Science MSc",
+			"Location": "São Paulo - Brazil",
+			"Date": "Jun. 2019 - Present",
+			"Items": [
+				"I am currently a partner of the LEONA project, performing tasks for the maintenance and development of equipment, both hardware and software. The LEONA network consists of observation stations for Transient Luminous Events, short-lived phenomena that occur in the atmosphere above intense electrical storms. The stations are equipped with specialized cameras with high sensitivity to light and control devices that allow remote management of the system.",
+				"I developed a PC-Arduino user interface to handle the operation of motion devices."
+			]
+		},
+		{	
+			"ID":"2",
+			"Organization": "Astronomical Observatory of Córdoba",
+			"Job Title": "Intern",
+			"Location": "Córdoba - Argentina",
+			"Date": "Jun. 2016 - Dec. 2018",
+			"Items": [
+				"Undergrad thesis: Design and implementation of a remotely-controlled camera system.",
+				"Technologies used: Hardware design, Arduino, C."
+			]
+		},
+		{	
+			"ID":"3",
+			"Organization": "Self-employed",
+			"Job Title": "CCTV and Intrusion Alarms Technician",
+			"Location": "Córdoba - Argentina",
+			"Date": "Jun. 2016 - Dec. 2018",
+			"Items": [
+				"I put the experience gained doing technical support for professional installers of CCTV and intrusion alarms in an independent company."
+			]
+		},
+		{	
+			"ID":"4",
+			"Organization": "Starligh S.A.",
+			"Job Title": "Technical support",
+			"Location": "Córdoba - Argentina",
+			"Date": "Jun. 2015 - Feb. 2016",
+			"Items": [
+				"Technical support to external and internal clients. IT support.",
+				"Product repair.",
+				"Preparation of manuals. Development and delivery of training courses."
+			]
+		}
+	],
+	"Writing": {
+		"Title": "Restructure of the LEONA Network Hardware System for the Observation of Transient Luminous Events",
+		"Author": "Undergrad Thesis - Co-Author: Velarde, J.M., Wayar, C.A. (2019)",
+		"Location": "National University of Córdoba, FCEFyN  - UNC",
+		"Date": "Jun. 2019"
+	},
+	"Projects": [
+		{
+			"ID" : "1",
+			"Institution": "National Institute for Space Research - INPE",
+			"Role": "Scolarship Student",
+			"Location": "São Paulo - Brazil",
+			"Date": "Oct. 2019 - Dec. 2020",
+			"Items":[
+				"The 2019 LEONA project research campaign was performed remotely, using equipment installed in 7 cities in Argentina and Brazil.",
+				"{http://www.inpe.br/noticias/noticia.php?Cod_Noticia=5284}{Link to INPE's portal news}",
+				"Due to the 2020 pandemic, the 2020 campaign of the LEONA project focused on the data processing of the 2018 and 2019 campaigns, and also, the preparation of equipment for future LEONA stations."
+			]
+		},
+		{
+			"ID" : "2",
+			"Institution": "National University of Córdoba - UNC",
+			"Role": "Technical Support",
+			"Location": "Argentina",
+			"Date": "Oct. 2018 - Dec. 2018",
+			"Items":[
+				"I participated in a period of the RELAMPAGO-CACTI project, as a part of the LEONA project team, whose objective is the study of phenomena that occur in intense storms. During this campaign I installed equipment and instrumentation in 3 locations of Argentina.",
+				"{http://www.inpe.br/noticias/noticia.php?Cod_Noticia=4983}{Link to INPE's portal news}"
+			]
+		}
+	],
+	"Filler":{
+		"Courses": [
+			{			
+				"ID":"1",
+				"Status": "In progress",
+				"Date": "2020",
+				"Course": "Fullstack Javascript Web Developer Program - The Odin Project",
+				"Platform": "theodinproject.com"
+			},
+			{			
+				"ID":"2",
+				"Status": "Finished",
+				"Date": "2017",
+				"Course": "Introduction to Computer Science and Programming Using Python - MITx",
+				"Platform": "edX"
+			}
+		],
+		"Languages":[
+			{
+				"ID":"1",
+				"Language": "Spanish",
+				"Proficiency": "Native",
+				"Learning method": "-",
+				"Date": "-"
+			},
+			{
+				"ID":"2",
+				"Language": "English",
+				"Proficiency": "Proficient",
+				"Learning method": "Self-taught",
+				"Date": "2012"
+			},
+			{
+				"ID":"3",
+				"Language": "Portuguese",
+				"Proficiency": "Conversational",
+				"Learning method": "Self-taught",
+				"Date": "2019"
+			}
+		],
+		"Skills":[
+			{
+				"ID":"1",
+				"Skill": "Python",
+				"Level": "Advanced",
+				"Learning method": "Self-taught",
+				"Date": "2017"
+			},
+			{
+				"ID":"2",
+				"Skill": "HTML5 & CSS, Javascript, React",
+				"Level": "Intermediate",
+				"Learning method": "Self-taught",
+				"Date": "2020"
+			},
+			{
+				"ID":"3",
+				"Skill": "3D Modeling (Blender), Illustrations (Krita)",
+				"Level": "Hobby",
+				"Learning method": "Self-taught",
+				"Date": "2020"
+			}
+		]
+	}
+}
