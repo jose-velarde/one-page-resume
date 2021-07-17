@@ -1,5 +1,4 @@
-.mainContainer {
-	height: 100vh;
+.noScroll {
 	overflow: hidden;
 }
 
@@ -21,3 +20,14 @@
 	background: #ddd;
 	border-radius: 15px;
 }
+
+@media (max-width: 900px) {
+	.noScroll {
+		overflow: auto;
+	}
+	/* .scrollableSection{
+		overflow-y: hidden;
+		overflow-x: hidden;
+	} */
+
+	}

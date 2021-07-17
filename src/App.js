@@ -3,10 +3,15 @@ import React, { Component } from 'react';
 import {Grid, FormGroup, FormControlLabel, Switch, ThemeProvider, Paper} from '@material-ui/core';
 import {styled, createTheme} from '@material-ui/core/styles';
 
-import Contact from './Contact';
-import SideEducation from './SideEducation';
-import SideSkills from "./SideSkills";
-import SideLanguages from "./SideLanguages";
+import Contact from './Side/Contact';
+import SideEducation from './Side/SideEducation';
+import SideSkills from "./Side/SideSkills";
+import SideLanguages from "./Side/SideLanguages";
+
+import Summary from './Main/Summary';
+import Experience from './Main/Experience';
+import Projects from './Main/Projects';
+import Courses from './Main/Courses';
 
 import './App.css';
 import 'fontsource-roboto'
@@ -99,8 +104,9 @@ class App extends Component {
 			},
 		})
 		return(
-			<ThemeProvider theme={this.currentTheme}>
-				<Paper square className="mainContainer scroll4">
+			<ThemeProvider theme={this.currentTheme} >
+				<Paper square className="noScroll scroll4" sx={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
+					{/* <Grid container sx={{width: '80%'}}> */}
 					<Grid container>
 						<Grid item xs={12} md={5} lg={3}>
 							<Grid container sx={{justifyContent: 'center'}}>
@@ -108,7 +114,7 @@ class App extends Component {
 									<FormControlLabel
 										control={<MaterialUISwitch theme={this.currentTheme} sx={{ m: 1 }} checked={this.state.theme} />}
 										onChange={() => this.toogleTheme()}
-										label="Toggle Dark Mode"
+										label=""
 									/>
 									<FormControlLabel
 											control={
@@ -126,18 +132,20 @@ class App extends Component {
 							</Grid>
 							<Grid container p={2} 
 							className="scrollableSection scroll4"
-							sx={{height: `calc(100vh - ${this.buttonHeight}px - ${this.contactHeight}px)`}}>
+							sx={{height: ['auto','auto', `calc(100vh - ${this.buttonHeight}px - ${this.contactHeight}px)`]}}>
 								<SideEducation/>
 								<SideLanguages/>
 								<SideSkills/>
 							</Grid>
 						</Grid>
-							<Grid item xs={12} md={7} lg={9} className="scroll4">								
-								Summary<br/>
-								Experience<br/>
-								Projects<br/>
-								Courses<br/>
+						<Grid item xs={12} md={7} lg={9}>
+							<Grid container p={2} className="scrollableSection scroll4" sx={{height: ['auto', 'auto', '100vh']}}>
+								<Summary/>
+								<Experience/>
+								<Projects/>
+								<Courses/>
 							</Grid>
+						</Grid>
 					</Grid>
 				</Paper>
 			</ThemeProvider>

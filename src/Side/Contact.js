@@ -6,7 +6,7 @@ import {FaLinkedin, FaGithub, FaGlobe} from 'react-icons/fa';
 import {FiMail} from 'react-icons/fi';
 import {IoLocationSharp} from 'react-icons/io5';
 
-import data from './JoseVelarde.json';
+import data from '../JoseVelarde.json';
 import './Contact.css';
 
 
@@ -25,13 +25,13 @@ class Contact extends Component {
 		return(
 			<Grid container ref={(contact) => {this.contactComponent = contact}}>
 				<Grid item xs={12} md={12} lg={12} sx={{display: 'flex', flexDirection:'column', alignItems: 'center'}}>
-					<Avatar alt="José Velarde" src="./profile.jpg" sx={{ width: 200, height: 230}}/>
+					<Avatar alt="José Velarde" src={process.env.PUBLIC_URL + '/profile.jpg'} sx={{ width: 140, height: 150}}/>
 				</Grid>
 				<Grid item xs={12} md={12} lg={12}>
-					<Typography variant="h4" align="center">{data.Contact['Name']} {data.Contact['Last Name']}</Typography>
+					<Typography variant="h5" align="center">{data.Contact['Name']} {data.Contact['Last Name']}</Typography>
 				</Grid>
 				<Grid item xs={12} md={12} lg={12}>
-					<Typography variant="h5" align="center">{data.Contact['Title']}<br/>{data.Contact['Profession']}</Typography>
+					<Typography variant="h6" align="center">{data.Contact['Title']}<br/>{data.Contact['Profession']}</Typography>
 				</Grid>
 				<Grid item xs={12} md={12} lg={12}>
 					<Typography variant="h6" align="center" color="text.secondary"><IoLocationSharp/>{data.Contact['City']}</Typography>
