@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import {Grid, Divider, Typography, Collapse, ListItem, ListItemText} from '@material-ui/core';
+import {Grid, Divider, Typography, Collapse, ListItem} from '@material-ui/core';
 
+import ColoredDivider from '../Components/ColoredDivider';
 import data from '../JoseVelarde.json';
 
 class SideSkills extends Component {
@@ -16,27 +17,34 @@ class SideSkills extends Component {
 			open: !prevState.open
 		}));
 	}
-
-	GridItemXs12 = (props) => <Grid item xs={12} {...props} />
-
+	updateDimensions = () => {
+		if(window.innerWidth < 900){
+			this.setState({ open: false });
+		} else {
+			this.setState({ open: true });
+		}
+	}
+	componentDidMount() {
+		this.updateDimensions()
+		window.addEventListener('resize', this.updateDimensions);
+	}
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateDimensions);
+	}
 	render() { 
 		return (
-			<Grid container rowSpacing={1.5} mt={1}>
-				<Grid item xs={12} md={12} lg={12}>
+			<Grid container rowSpacing={1.5}>
+				<Grid item xs={12} md={12} lg={12} sx={{display: 'flex'}}>
 					<ListItem button onClick={this.handleClick}>
-						<ListItemText>
-							<Divider variant="fullWidth">
-								<Typography variant="h5" >
-									Skills
-								</Typography>
-							</Divider>
-						</ListItemText>
+						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
+						<Typography variant="h5" px={1} sx={{alignSelf: 'center'}}>Skills</Typography>
+						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
 					</ListItem>
 				</Grid>
-				<Collapse in={this.state.open} timeout="auto" unmountOnExit component={this.GridItemXs12}>
+				<Collapse in={this.state.open} timeout="auto" unmountOnExit sx={{width: '100%'}}>
 					{data.Filler.Skills.map((skill, index) =>
-						<Grid item container fluid key={ "skill" + index} sx={{display :'flex', justifyContent: 'space-between'}} >
-							<Grid item xs={8} md={8} lg={8}>
+						<Grid item container key={ "skill" + index} sx={{display :'flex', justifyContent: 'space-between'}} rowSpacing={1}>
+							<Grid item xs={8} md={8} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
 								<Typography variant="h6" fontWeight="500" >{skill["Skill"]}</Typography>
 							</Grid>
 							<Grid item xs={4} md={4} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>

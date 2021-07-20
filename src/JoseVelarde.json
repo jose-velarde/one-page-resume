@@ -12,7 +12,7 @@
 		"Linkedin": "jose-velarde"
 	},
 
-	"Summary": "Electronic Engineer from the National University of Córdoba, Argentina. I am concluding a master's degree at the National Institute for Space Research (INPE, Brazil), where I work in the processing of satellite data and the design of a computer vision software to the research optical phenomena in the upper atmosphere, using Python. My professional goal is to gain experience in software and hardware design, and in the future, learn about Artificial Intelligence and Machine Learning.",
+	"Summary": "<b>Electronics Engineer</b> from the National University of Córdoba, Argentina. Space Science <b>Master's degree Student</b> at Brazil's National Institute for Space Research (INPE), developing an intense thunderstorm nowcasting software to identify the most electrically active regions, and a motion detection software to capture upper atmospheric phenomena. <br/>Specialized in programming with <b>Python</b> and, hopefully, a future data scientist. Currently located in Salta, Argentina, learning React to seek a position as a <b>Front-end web developer</b>.",
 
 	"Education": [
 		{
@@ -43,7 +43,7 @@
 			"Location": "Salta - Argentina",
 			"Date": "2003 - 2005",
 			"Tasks":[
-				"I studied double shift course for three years, performing various laboratory practices."
+				"Studied double shift course for three years, performing various Electronics laboratory practices."
 			]
 		}
 	],
@@ -55,9 +55,12 @@
 			"Location": "São Paulo - Brazil",
 			"Date": "Jun. 2019 - Present",
 			"Tasks": [
-				"I am currently a partner of the LEONA project, performing tasks for the maintenance and development of equipment, both hardware and software. The LEONA network consists of observation stations for Transient Luminous Events, short-lived phenomena that occur in the atmosphere above intense electrical storms. The stations are equipped with specialized cameras with high sensitivity to light and control devices that allow remote management of the system.",
-				"I developed a PC-Arduino user interface to handle the operation of motion devices."
-			]
+				"Participated in field/remote research campaigns to observe convective storms and study upper atmospheric phenomena.",
+				"Developed an intense thunderstorm nowcasting software to identify electrically active regions.",
+				"Developed a motion detection software to capture short-lived optical phenomena.",
+				"Developed a GUI to handle the operation of Arduino-based motion system."
+			],
+			"Stack": ["Python", "OpenCV", "Matlab", "Data Processing", "Software Development", "Academic Research", "Academic Writing"]
 		},
 		{	
 			"ID":"2",
@@ -66,19 +69,23 @@
 			"Location": "Córdoba - Argentina",
 			"Date": "Jun. 2016 - Dec. 2018",
 			"Tasks": [
-				"Undergrad thesis: Design and implementation of a remotely-controlled camera system.",
-				"Technologies used: Hardware design, Arduino, C."
-			]
+				"Designed a remotely-controlled video camera system prototype for the observation of intense thunderstorms.",
+				"Installed intense thunderstorms observation stations in Córdoba, La Rioja and Santiago del Estero, Argentina.",
+				"Participated in the RELAMPAGO-CACTI research campaign to observe convective storms."
+			],
+			"Stack": ["Hardware Design", "Arduino", "C",  "Academic Writing"]
 		},
 		{	
 			"ID":"3",
 			"Organization": "Self-employed",
-			"Job Title": "CCTV and Intrusion Alarms Technician",
+			"Job Title": "Security Systems Technician",
 			"Location": "Córdoba - Argentina",
 			"Date": "Jun. 2016 - Dec. 2018",
 			"Tasks": [
-				"I put the experience gained doing technical support for professional installers of CCTV and intrusion alarms in an independent company."
-			]
+				"Started an independent Security Systems & Services bussines.",
+				"Installed and mantained intrusion alarms, camera and surveillance, card access and personnel monitoring, and home automation systems."
+			],
+			"Stack": ["IT Support", "CCTV", "Intrusion Alarms", "Home Automation"]
 		},
 		{	
 			"ID":"4",
@@ -87,10 +94,10 @@
 			"Location": "Córdoba - Argentina",
 			"Date": "Jun. 2015 - Feb. 2016",
 			"Tasks": [
-				"Technical support to external and internal clients. IT support.",
-				"Product repair.",
-				"Preparation of manuals. Development and delivery of training courses."
-			]
+				"Technical support for intrusion alarms and surveillance system installers.",
+				"Development and delivery of training courses for internal and external clients."
+			],
+			"Stack": ["IT Support", "Help Desk", "Hardware Maintenance", "Workshop Speaker"]
 		}
 	],
 	"Writing": {
@@ -102,25 +109,27 @@
 	"Projects": [
 		{
 			"ID" : "1",
-			"Institution": "National Institute for Space Research - INPE",
-			"Role": "Scolarship Student",
+			"Institution": "Scolarship Student for the National Institute for Space Research - INPE",
+			"Role": "LEONA Network Project",
 			"Location": "São Paulo - Brazil",
 			"Date": "Oct. 2019 - Dec. 2020",
 			"Tasks":[
-				"The 2019 LEONA project research campaign was performed remotely, using equipment installed in 7 cities in Argentina and Brazil.",
-				"{http://www.inpe.br/noticias/noticia.php?Cod_Noticia=5284}{Link to INPE's portal news}",
-				"Due to the 2020 pandemic, the 2020 campaign of the LEONA project focused on the data processing of the 2018 and 2019 campaigns, and also, the preparation of equipment for future LEONA stations."
+				"2019 Campaign: Succesfully recorded upper atmospheric phenomena in video footage with equipment installed in 7 locations in Argentina and Brazil.",
+				"<a href='http://www.inpe.br/noticias/noticia.php?Cod_Noticia=5284' style='color: inherit'>LEONA 2019 Campaign INPE's portal news.</a>",
+				"2020 Campaign: Processed +50 hours of recorded footage from the 2018 and 2019 campaigns.",
+				"2021 Campaign: Prepared equipment for future LEONA stations."
 			]
 		},
 		{
 			"ID" : "2",
-			"Institution": "National University of Córdoba - UNC",
-			"Role": "Technical Support",
+			"Institution": "Tech Support for the National University of Córdoba - UNC",
+			"Role": "RELAMPAGO-CACTI Project",
 			"Location": "Argentina",
 			"Date": "Oct. 2018 - Dec. 2018",
 			"Tasks":[
-				"I participated in a period of the RELAMPAGO-CACTI project, as a part of the LEONA project team, whose objective is the study of phenomena that occur in intense storms. During this campaign I installed equipment and instrumentation in 3 locations of Argentina.",
-				"{http://www.inpe.br/noticias/noticia.php?Cod_Noticia=4983}{Link to INPE's portal news}"
+				"Installed equipment and instrumentation in 3 locations of Argentina.",
+				"Succesfully recorded upper atmospheric phenomena for the first time with the LEONA Network.",
+				"<a href='http://www.inpe.br/noticias/noticia.php?Cod_Noticia=4983' style='color: inherit'>LEONA 2018 Campaign INPE's portal news.<a>"
 			]
 		}
 	],
@@ -129,24 +138,27 @@
 			{			
 				"ID":"1",
 				"Status": "In progress",
-				"Date": "2021",
-				"Course": "Deep Dive Into Modern Web Development - Full Stack open 2021",
-				"Platform": "fullstackopen.com"
+				"Date": "Full Stack open (2021)",
+				"Course": "Deep Dive Into Modern Web Development",
+				"Platform": "fullstackopen.com",
+				"url": "https://fullstackopen.com/en/about"
 			},
 			{		
 					
 				"ID":"2",
 				"Status": "In progress",
-				"Date": "2020",
-				"Course": "Fullstack Javascript Web Developer Program - The Odin Project",
-				"Platform": "theodinproject.com"
+				"Date": "The Odin Project (2020)",
+				"Course": "Fullstack Javascript Web Developer Program",
+				"Platform": "theodinproject.com",
+				"url": "https://www.theodinproject.com/about"
 			},
 			{			
 				"ID":"3",
 				"Status": "Finished",
-				"Date": "2017",
-				"Course": "Introduction to Computer Science and Programming Using Python - MITx",
-				"Platform": "edX"
+				"Date": "MITx (2017)",
+				"Course": "Introduction to Computer Science and Programming Using Python",
+				"Platform": "edX",
+				"url": "https://www.edx.org/es/course/introduction-to-computer-science-and-programming-7"
 			}
 
 		],
@@ -195,6 +207,7 @@
 				"Learning method": "Self-taught",
 				"Date": "2020"
 			}
-		]
+		],
+		"Interests":["Python", "React", "Front-end", "UI/UX",  "Drawing", "Data Science", "Computer Vision"]
 	}
 }

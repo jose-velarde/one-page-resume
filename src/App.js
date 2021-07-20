@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 
-import {Grid, FormGroup, FormControlLabel, Switch, ThemeProvider, Paper} from '@material-ui/core';
+import {CssBaseline, Grid, FormGroup, FormControlLabel, Switch, ThemeProvider, Paper} from '@material-ui/core';
 import {styled, createTheme} from '@material-ui/core/styles';
 
 import Contact from './Side/Contact';
-import SideEducation from './Side/SideEducation';
 import SideSkills from "./Side/SideSkills";
 import SideLanguages from "./Side/SideLanguages";
+import SideInterests from "./Side/SideInterests";
 
 import Summary from './Main/Summary';
+import Education from './Main/Education';
 import Experience from './Main/Experience';
 import Projects from './Main/Projects';
 import Courses from './Main/Courses';
 
+import Colors from './Colors'
 import './App.css';
 import 'fontsource-roboto'
 
@@ -40,7 +42,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 		},
 	},
 	'& .MuiSwitch-thumb': {
-	backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#001e3c',
+	backgroundColor: theme.palette.mode === 'dark' ? Colors.awesomeRed : Colors.bgDarkDarker,
 	width: 32,
 	height: 32,
 	'&:before': {
@@ -64,20 +66,31 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 	},
 }));
 
+const TopSideGrid = styled(Grid)(({theme})=> ({
+	backgroundColor: theme.palette.mode === 'dark' ? Colors.bgDarkDarker : Colors.bgLightDarker,
+	transition: theme.transitions.create(['all', 'background-color'],{duration: '.5s', easing: 'ease'}),
+	})
+)
+const BottomSideGrid = styled(Grid)(({theme})=> ({
+	backgroundColor: theme.palette.mode === 'dark' ? Colors.bgDarkPrimary : Colors.bgLightPrimary,
+	transition: theme.transitions.create(['all', 'background-color'],{duration: '.5s', easing: 'ease'}),
+	})
+)
+const MainGrid = styled(Grid)(({theme})=> ({
+	backgroundColor: theme.palette.mode === 'dark' ? Colors.bgDarkLighter : Colors.bgLightLighter,
+	transition: theme.transitions.create(['all', 'background-color'],{duration: '.5s', easing: 'ease'}),
+	})
+)
+
 class App extends Component {
 	constructor(props){
 		super(props)
 		this.state = {
 			showContactLinkText: false,
-			theme: false,
+			themeMode: false,
 			contactHeight : 0
 		};
 		this.buttonHeight = 50
-		this.currentTheme = createTheme({
-			palette:{
-				mode: this.state.theme? "light" : "dark",
-			},
-		})	
 	}
 
 	toggleLinkText = () => {
@@ -88,7 +101,7 @@ class App extends Component {
 	}
 	toogleTheme = () => {
 		this.setState(prevState => ({
-			theme: !prevState.theme
+			themeMode: !prevState.themeMode
 		}));
 		
 	}
@@ -98,54 +111,86 @@ class App extends Component {
 	}
 
 	render(){
-		this.currentTheme = createTheme({
+		this.topSideGridTheme = createTheme({
 			palette:{
-				mode: this.state.theme? "dark" : "light",
+				mode: this.state.themeMode? "dark" : "light",
+				text: {
+					secondary: this.state.themeMode? Colors.lightgray : Colors.gray,
+					terciary: this.state.themeMode? Colors.awesomeLightRed : Colors.awesomeRed,
+
+				}
 			},
-		})
+		});
+		this.bottomSideGridTheme = createTheme({
+			palette:{
+				mode: this.state.themeMode? "dark" : "light",
+				text: {
+					secondary: this.state.themeMode? Colors.lightgray : Colors.gray,
+					terciary: this.state.themeMode? Colors.awesomeLightRed : Colors.awesomeRed,
+				}
+			},
+		});
+		this.mainGridTheme = createTheme({
+			palette:{
+				mode: this.state.themeMode? "dark" : "light",
+				text: {
+					// primary: this.state.themeMode? Colors.white : Colors.darktext,
+					secondary: this.state.themeMode? Colors.lightgray : Colors.gray,
+					terciary: this.state.themeMode? Colors.awesomeLightRed : Colors.awesomeRed,
+				}
+			},
+		});
 		return(
-			<ThemeProvider theme={this.currentTheme} >
-				<Paper square className="noScroll scroll4" sx={{height: '100vh', display: 'flex', justifyContent: 'center'}}>
-					{/* <Grid container sx={{width: '80%'}}> */}
+			<ThemeProvider theme={this.mainGridTheme}>
+				<CssBaseline />
+				<Paper square className="noScroll scroll4" sx={{height: ['auto', 'auto', '100vh'], margin: '0 auto', width: '80%'}}>
 					<Grid container>
-						<Grid item xs={12} md={5} lg={3}>
-							<Grid container sx={{justifyContent: 'center'}}>
-								<FormGroup row>
-									<FormControlLabel
-										control={<MaterialUISwitch theme={this.currentTheme} sx={{ m: 1 }} checked={this.state.theme} />}
+						<Grid item xs={12} md={5} lg={4}>
+							<ThemeProvider theme={this.topSideGridTheme}>
+								<TopSideGrid container px={3} sx={{justifyContent: 'center'}}>
+									<FormGroup row>
+										<FormControlLabel
+										control={
+											<MaterialUISwitch theme={this.mainGridTheme} sx={{ m: 1 }} checked={this.state.themeMode} />
+										}
 										onChange={() => this.toogleTheme()}
 										label=""
-									/>
-									<FormControlLabel
-											control={
-												<Switch checked={this.state.showContactLinkText} onChange={() => this.toggleLinkText()} name="contactLinks" />
-											}
-											label="Show Links"
 										/>
-								</FormGroup>
-							</Grid>
-							{/* Use key to force componentDidMount() and get the component new height, very important */}
-							<Grid container px={2}>
-								<Contact showLinkText={this.state.showContactLinkText} 
-								key={this.state.showContactLinkText}
-								getHeight={this.handleGetHeight}/>
-							</Grid>
-							<Grid container p={2} 
-							className="scrollableSection scroll4"
-							sx={{height: ['auto','auto', `calc(100vh - ${this.buttonHeight}px - ${this.contactHeight}px)`]}}>
-								<SideEducation/>
-								<SideLanguages/>
-								<SideSkills/>
-							</Grid>
+										<FormControlLabel
+										control={
+											<Switch checked={this.state.showContactLinkText} onChange={() => this.toggleLinkText()} name="contactLinks" />
+										}
+										label={this.state.showContactLinkText? "Hide Info" : "Show Info"}
+										/>
+									</FormGroup>
+								</TopSideGrid>
+								<TopSideGrid container px={3}>
+									<Contact showLinkText={this.state.showContactLinkText}
+									key={this.state.showContactLinkText}
+									getHeight={this.handleGetHeight}/>
+								</TopSideGrid>
+							</ThemeProvider>
+							<ThemeProvider theme={this.bottomSideGridTheme}>
+								<BottomSideGrid container px={3}
+								className="scrollableSection scroll4"
+								sx={{height: ['auto','auto', `calc(100vh - ${this.buttonHeight}px - ${this.contactHeight}px)`]}}>
+									<SideLanguages/>
+									<SideSkills/>
+									<SideInterests/>
+								</BottomSideGrid>
+							</ThemeProvider>
 						</Grid>
-						<Grid item xs={12} md={7} lg={9}>
-							<Grid container p={2} className="scrollableSection scroll4" sx={{height: ['auto', 'auto', '100vh']}}>
-								<Summary/>
-								<Experience/>
-								<Projects/>
-								<Courses/>
-							</Grid>
-						</Grid>
+						<ThemeProvider theme={this.mainGridTheme}>
+							<MainGrid item xs={12} md={7} lg={8} px={3}>
+								<Grid container className="scrollableSection scroll4" sx={{height: ['auto', 'auto', '100vh']}}>
+									<Summary/>
+									<Education/>
+									<Experience/>
+									<Projects/>
+									<Courses/>
+								</Grid>
+							</MainGrid>
+						</ThemeProvider>
 					</Grid>
 				</Paper>
 			</ThemeProvider>

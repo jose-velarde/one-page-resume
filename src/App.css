@@ -2,6 +2,10 @@
 	overflow: hidden;
 }
 
+::selection {
+	background: #ff8484;
+}
+
 .scrollableSection{
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -25,9 +29,9 @@
 	.noScroll {
 		overflow: auto;
 	}
-	/* .scrollableSection{
+	.scrollableSection{
 		overflow-y: hidden;
 		overflow-x: hidden;
-	} */
+	}
 
 	}
