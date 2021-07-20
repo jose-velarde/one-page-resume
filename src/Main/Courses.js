@@ -9,7 +9,7 @@ class Courses extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			open: true
+			open: window.innerWidth < 900? false : true,
 		}
 	}
 	handleClick = () =>{
@@ -24,13 +24,13 @@ class Courses extends Component {
 			this.setState({ open: true });
 		}
 	}
-	componentDidMount() {
-		this.updateDimensions()
-		window.addEventListener('resize', this.updateDimensions);
-	}
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateDimensions);
-	}
+	// componentDidMount() {
+		// this.updateDimensions()
+		// window.addEventListener('resize', this.updateDimensions);
+	// }
+	// componentWillUnmount() {
+	// 	window.removeEventListener('resize', this.updateDimensions);
+	// }
 
 	render() { 
 		return (
@@ -44,17 +44,17 @@ class Courses extends Component {
 				</Grid>
 				<Collapse in={this.state.open} timeout="auto" unmountOnExit sx={{width: '100%'}}>
 					{data.Filler.Courses.map((course, index) =>
-						<Grid item container key={ "course" + index} sx={{display :'flex', justifyContent: 'space-between'}} px={3}>
-							<Grid item xs={8} md={8} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
-								<Typography variant="h6" fontWeight="500" >{course["Course"]}</Typography>
+						<Grid item container key={ "course" + index} sx={{display :'flex', justifyContent: 'space-between'}} rowSpacing={0.3} px={3}>
+							<Grid item xs={7} md={7} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
+								<Typography variant="subtitle1" fontWeight="600" >{course["Course"]}</Typography>
 							</Grid>
-							<Grid item xs={4} md={4} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
+							<Grid item xs={5} md={5} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
 								<Typography variant="subtitle1" color="text.terciary">{course["Status"]}</Typography>
 							</Grid>
-							<Grid item xs={6} md={6} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
+							<Grid item xs={7} md={7} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
 								<Typography variant="subtitle1" color="text.secondary" >{course["Date"]}</Typography>
 							</Grid>
-							<Grid item xs={6} md={6} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
+							<Grid item xs={5} md={5} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
 								<Typography variant="subtitle1" component="a" sx={{textDecoration: 'none', color: 'inherit'}} href={course["url"]}>{course["Platform"]}</Typography>
 							</Grid>
 							<Grid item xs={12} md={12} lg={12}>

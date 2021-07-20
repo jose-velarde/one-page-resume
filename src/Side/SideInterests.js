@@ -11,7 +11,7 @@ class SideInterests extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			open: true,
+			open: window.innerWidth < 900? false : true,
 		}
 	}
 	
@@ -28,16 +28,16 @@ class SideInterests extends Component {
 			this.setState({ open: true });
 		}
 	}
-	componentDidMount() {
-		this.updateDimensions()
-		window.addEventListener('resize', this.updateDimensions);
-	}
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateDimensions);
-	}
+	// componentDidMount() {
+	// 	this.updateDimensions()
+		// window.addEventListener('resize', this.updateDimensions);
+	// }
+	// componentWillUnmount() {
+	// 	window.removeEventListener('resize', this.updateDimensions);
+	// }
 	render() { 
 		return (
-			<Grid container rowSpacing={1.5} pb={2}>
+			<Grid container rowSpacing={1.5} >
 				<Grid item xs={12} md={12} lg={12} sx={{display: 'flex'}}>
 					<ListItem button onClick={this.handleClick}>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
@@ -46,9 +46,12 @@ class SideInterests extends Component {
 					</ListItem>
 				</Grid>
 				<Collapse in={this.state.open} timeout="auto" unmountOnExit sx={{width: '100%'}} >
-					{data.Filler.Interests.map((interest, index) =>
+					<Grid item px={3}>
+						{data.Filler.Interests.map((interest, index) =>
 							<RandomColorChip key={ "interest" + index} label={interest} sx={{typography: 'body1', margin: '3px'}}/>
-					)}
+						)}
+					</Grid>
+
 				</Collapse>
 			</Grid>
 		);

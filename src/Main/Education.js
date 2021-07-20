@@ -9,7 +9,7 @@ class Education extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			open: true
+			open: window.innerWidth < 900? false : true,
 		}
 	}
 	
@@ -25,13 +25,13 @@ class Education extends Component {
 			this.setState({ open: true });
 		}
 	}
-	componentDidMount() {
-		this.updateDimensions()
-		window.addEventListener('resize', this.updateDimensions);
-	}
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateDimensions);
-	}
+	// componentDidMount() {
+	// 	this.updateDimensions()
+		// window.addEventListener('resize', this.updateDimensions);
+	// }
+	// componentWillUnmount() {
+	// 	window.removeEventListener('resize', this.updateDimensions);
+	// }
 	render() { 
 		return (
 			<Grid container rowSpacing={1.5}>
@@ -44,20 +44,20 @@ class Education extends Component {
 				</Grid>
 				<Collapse in={this.state.open} timeout="auto" unmountOnExit sx={{width: '100%'}}>
 					{data.Education.map((edu, index) =>
-						<Grid item container key={ "edu" + index} rowSpacing={0.6} px={3}>
+						<Grid item container key={ "edu" + index} rowSpacing={0.3} px={3}>
 							<Grid item container sx={{display :'flex', justifyContent: 'space-between'}}>
-								<Grid item xs={5} md={5} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
-									<Typography variant="h6" fontWeight="500" >{edu["Degree"]}</Typography>
+								<Grid item xs={8} md={8} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
+									<Typography variant="subtitle1" fontWeight="600">{edu["Degree"]}</Typography>
 								</Grid>
-								<Grid item xs={7} md={7} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
+								<Grid item xs={4} md={4} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
 									<Typography variant="subtitle1">{edu["Date"]}</Typography>
 								</Grid>
 							</Grid>
 							<Grid item container sx={{display :'flex', justifyContent: 'space-between'}} >
-								<Grid item xs={5} md={5} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
-									<Typography variant="body1" color='text.secondary'>{edu["Institution"]}</Typography>
+								<Grid item xs={8} md={8} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
+									<Typography variant="subtitle1" color='text.secondary'>{edu["Institution"]}</Typography>
 								</Grid>
-								<Grid item xs={7} md={7} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
+								<Grid item xs={4} md={4} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
 									<Typography variant="subtitle1" color='text.terciary'>{edu["Location"]}</Typography>
 								</Grid>
 							</Grid>

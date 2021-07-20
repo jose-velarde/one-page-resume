@@ -143,11 +143,11 @@ class App extends Component {
 		return(
 			<ThemeProvider theme={this.mainGridTheme}>
 				<CssBaseline />
-				<Paper square className="noScroll scroll4" sx={{height: ['auto', 'auto', '100vh'], margin: '0 auto', width: '80%'}}>
+				<Paper square className="noScroll scroll4" sx={{height: ['auto', 'auto', '100vh'], margin: '0 auto', width: ['100%', '80%', '80%']}}>
 					<Grid container>
 						<Grid item xs={12} md={5} lg={4}>
 							<ThemeProvider theme={this.topSideGridTheme}>
-								<TopSideGrid container px={3} sx={{justifyContent: 'center'}}>
+								<TopSideGrid container px={[0, 0, 3]} sx={{justifyContent: 'center'}}>
 									<FormGroup row>
 										<FormControlLabel
 										control={
@@ -164,14 +164,14 @@ class App extends Component {
 										/>
 									</FormGroup>
 								</TopSideGrid>
-								<TopSideGrid container px={3}>
+								<TopSideGrid container px={[0, 0, 3]}>
 									<Contact showLinkText={this.state.showContactLinkText}
 									key={this.state.showContactLinkText}
 									getHeight={this.handleGetHeight}/>
 								</TopSideGrid>
 							</ThemeProvider>
 							<ThemeProvider theme={this.bottomSideGridTheme}>
-								<BottomSideGrid container px={3}
+								<BottomSideGrid container px={[0, 0, 3]}
 								className="scrollableSection scroll4"
 								sx={{height: ['auto','auto', `calc(100vh - ${this.buttonHeight}px - ${this.contactHeight}px)`]}}>
 									<SideLanguages/>
@@ -181,7 +181,7 @@ class App extends Component {
 							</ThemeProvider>
 						</Grid>
 						<ThemeProvider theme={this.mainGridTheme}>
-							<MainGrid item xs={12} md={7} lg={8} px={3}>
+							<MainGrid item xs={12} md={7} lg={8} px={[0, 0, 3]}>
 								<Grid container className="scrollableSection scroll4" sx={{height: ['auto', 'auto', '100vh']}}>
 									<Summary/>
 									<Education/>

@@ -9,7 +9,7 @@ class SideLanguages extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			open: true
+			open: window.innerWidth < 900? false : true,
 		}
 	}
 	handleClick = () =>{
@@ -25,13 +25,13 @@ class SideLanguages extends Component {
 			this.setState({ open: true });
 		}
 	}
-	componentDidMount() {
-		this.updateDimensions()
-		window.addEventListener('resize', this.updateDimensions);
-	}
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateDimensions);
-	}
+	// componentDidMount() {
+		// this.updateDimensions()
+		// window.addEventListener('resize', this.updateDimensions);
+	// }
+	// componentWillUnmount() {
+	// 	window.removeEventListener('resize', this.updateDimensions);
+	// }
 	
 	render() { 
 		return (  
@@ -45,9 +45,9 @@ class SideLanguages extends Component {
 				</Grid>
 				<Collapse in={this.state.open} timeout="auto" unmountOnExit sx={{width: '100%'}}>
 					{data.Filler.Languages.map((lang, index) =>
-						<Grid item container key={ "lang" + index} sx={{display :'flex', justifyContent: 'space-between'}} rowSpacing={1}>
+						<Grid item container key={ "lang" + index} px={3} sx={{display :'flex', justifyContent: 'space-between'}} rowSpacing={1}>
 							<Grid item xs={7} md={7} lg={7} sx={{textAlign: 'start', alignSelf: 'center'}}>
-								<Typography variant="h6" fontWeight="500" >{lang["Language"]}</Typography>
+								<Typography variant="subtitle1" fontWeight="600" >{lang["Language"]}</Typography>
 							</Grid>
 							<Grid item xs={5} md={5} lg={5} sx={{textAlign: 'end', alignSelf: 'center'}}>
 								<Typography variant="subtitle1" color='text.secondary'>{lang["Proficiency"]}</Typography>

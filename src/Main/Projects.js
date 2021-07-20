@@ -9,7 +9,7 @@ class Projects extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			open: true
+			open: window.innerWidth < 900? false : true,
 		}
 	}
 	handleClick = () =>{
@@ -24,13 +24,13 @@ class Projects extends Component {
 			this.setState({ open: true });
 		}
 	}
-	componentDidMount() {
-		this.updateDimensions()
-		window.addEventListener('resize', this.updateDimensions);
-	}
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateDimensions);
-	}
+	// componentDidMount() {
+	// 	this.updateDimensions()
+		// window.addEventListener('resize', this.updateDimensions);
+	// }
+	// componentWillUnmount() {
+	// 	window.removeEventListener('resize', this.updateDimensions);
+	// }
 
 	render() { 
 		return (  
@@ -44,20 +44,20 @@ class Projects extends Component {
 				</Grid>
 				<Collapse in={this.state.open} timeout="auto" unmountOnExit sx={{width: '100%'}}>
 					{data.Projects.map((proj, index) =>
-						<Grid item container key={ "proj" + index} rowSpacing={0.6} px={3}>
+						<Grid item container key={ "proj" + index} rowSpacing={0.3} px={3}>
 							<Grid item container sx={{display :'flex', justifyContent: 'space-between'}}>
-								<Grid item xs={5} md={5} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
-									<Typography variant="h6" fontWeight="500" >{proj["Role"]}</Typography>
+								<Grid item xs={8} md={8} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
+									<Typography variant="subtitle1" fontWeight="600">{proj["Role"]}</Typography>
 								</Grid>
-								<Grid item xs={7} md={7} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
+								<Grid item xs={4} md={4} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
 									<Typography variant="subtitle1">{proj["Date"]}</Typography>
 								</Grid>
 							</Grid>
 							<Grid item container sx={{display :'flex', justifyContent: 'space-between'}}>
-								<Grid item xs={5} md={5} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
-									<Typography variant="body1" fontWeight="500" color="text.secondary" >{proj["Institution"]}</Typography>
+								<Grid item xs={8} md={8} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
+									<Typography variant="subtitle1" fontWeight="500" color="text.secondary" >{proj["Institution"]}</Typography>
 								</Grid>
-								<Grid item xs={7} md={7} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
+								<Grid item xs={4} md={4} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
 									<Typography variant="subtitle1" color="text.terciary">{proj["Location"]}</Typography>
 								</Grid>
 							</Grid>
