@@ -46,18 +46,18 @@ class Projects extends Component {
 					{data.Projects.map((proj, index) =>
 						<Grid item container key={ "proj" + index} rowSpacing={0.3} px={3}>
 							<Grid item container sx={{display :'flex', justifyContent: 'space-between'}}>
-								<Grid item xs={8} md={8} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
+								<Grid item xs={8} md={7} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
 									<Typography variant="subtitle1" fontWeight="600">{proj["Role"]}</Typography>
 								</Grid>
-								<Grid item xs={4} md={4} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
+								<Grid item xs={4} md={5} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
 									<Typography variant="subtitle1">{proj["Date"]}</Typography>
 								</Grid>
 							</Grid>
 							<Grid item container sx={{display :'flex', justifyContent: 'space-between'}}>
-								<Grid item xs={8} md={8} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
+								<Grid item xs={8} md={7} lg={8} sx={{textAlign: 'start', alignSelf: 'center'}}>
 									<Typography variant="subtitle1" fontWeight="500" color="text.secondary" >{proj["Institution"]}</Typography>
 								</Grid>
-								<Grid item xs={4} md={4} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
+								<Grid item xs={4} md={5} lg={4} sx={{textAlign: 'end', alignSelf: 'center'}}>
 									<Typography variant="subtitle1" color="text.terciary">{proj["Location"]}</Typography>
 								</Grid>
 							</Grid>

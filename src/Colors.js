@@ -22,13 +22,36 @@ const Colors = {
 	awesomeNephritis : '#27AE60',
 	awesomeConcrete : '#95A5A6',
 	awesomeDarknight : '#131A28',
-	bgDarkDarker: '#121212',
-	bgDarkPrimary: '#121212',
-	bgDarkLighter: '#121212',
-	bgLightDarker: '#ffffff',
-	bgLightPrimary:'#ffffff',
-	bgLightLighter: '#ffffff',
-	darktext : '#414141',
+	darktext : '#414141'
+}
+	
+const Theme = {
+	bgDarkTop: '#121212',
+	bgLightTop: '#ffffff',
+	textDarkSecondaryTop: Colors.lightgray,
+	textLightSecondaryTop: Colors.gray,
+	textDarkTerciaryTop: Colors.awesomeLightRed,
+	textLightTerciaryTop: Colors.awesomeRed,
+
+	bgDarkBottom: '#121212',
+	bgLightBottom:'#ffffff',
+	textDarkSecondaryBottom: Colors.lightgray,
+	textLightSecondaryBottom: Colors.gray,
+	textDarkTerciaryBottom: Colors.awesomeLightRed,
+	textLightTerciaryBottom: Colors.awesomeRed,
+
+	bgDarkMain: '#121212',
+	bgLightMain: '#ffffff',
+	textDarkPrimaryMain: Colors.white,
+	textLightPrimaryMain: Colors.black,
+	textDarkSecondaryMain: Colors.lightgray,
+	textLightSecondaryMain: Colors.gray,
+	textDarkTerciaryMain: Colors.awesomeLightRed,
+	textLightTerciaryMain: Colors.awesomeRed,
+
+	bgDarkPaper: '#161616',
+	bgLightPaper: '#eaeaea',
 }
 
-	export default Colors;
+
+export default Theme;
