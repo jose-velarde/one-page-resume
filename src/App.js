@@ -23,11 +23,19 @@ import 'fontsource-roboto'
 
 const TopSideGrid = styled(Grid)(({theme})=> ({
 	backgroundColor: theme.palette.mode === 'dark' ? Theme.bgDarkTop : Theme.bgLightTop,
+	background: theme.palette.mode === 'dark' ? 
+		`linear-gradient(90deg, ${Theme.bgDarkTop} 0%, ${Theme.bgDarkMain} 100%)`
+		:
+		`linear-gradient(90deg, ${Theme.bgLightTop} 0%, ${Theme.bgLightMain} 100%, ${Theme.bgLightMain} 100%)`,
 	transition: theme.transitions.create(['all', 'background-color'],{duration: '.5s', easing: 'ease'}),
 	})
 )
 const BottomSideGrid = styled(Grid)(({theme})=> ({
 	backgroundColor: theme.palette.mode === 'dark' ? Theme.bgDarkBottom : Theme.bgLightBottom,
+	background: theme.palette.mode === 'dark' ? 
+		`linear-gradient(90deg, ${Theme.bgDarkBottom} 0%, ${Theme.bgDarkMain} 100%)`
+		:
+		`linear-gradient(90deg, ${Theme.bgLightBottom} 0%, ${Theme.bgLightMain} 100%, ${Theme.bgLightMain} 100%)`,
 	transition: theme.transitions.create(['all', 'background-color'],{duration: '.5s', easing: 'ease'}),
 	})
 )
@@ -70,10 +78,12 @@ class App extends Component {
 			palette:{
 				mode: this.state.themeMode? "dark" : "light",
 				text: {
+					primary: this.state.themeMode? Theme.textDarkPrimaryTop : Theme.textLightPrimaryTop,
 					secondary: this.state.themeMode? Theme.textDarkSecondaryTop : Theme.textLightSecondaryTop,
 					terciary: this.state.themeMode? Theme.textDarkTerciaryTop : Theme.textLightTerciaryTop,
 				},
 				background: {
+					paper: this.state.themeMode? Theme.bgDarkPaper: Theme.bgLightPaper,
 					default: this.state.themeMode? Theme.bgDarkPaper: Theme.bgLightPaper,
 				}
 			},
@@ -82,10 +92,12 @@ class App extends Component {
 			palette:{
 				mode: this.state.themeMode? "dark" : "light",
 				text: {
+					primary: this.state.themeMode? Theme.textDarkPrimaryMain : Theme.textLightPrimaryMain,
 					secondary: this.state.themeMode? Theme.textDarkSecondaryBottom : Theme.textLightSecondaryBottom,
 					terciary: this.state.themeMode? Theme.textDarkTerciaryBottom : Theme.textLightTerciaryBottom,
 				},
 				background: {
+					paper: this.state.themeMode? Theme.bgDarkPaper: Theme.bgLightPaper,
 					default: this.state.themeMode? Theme.bgDarkPaper: Theme.bgLightPaper,
 				}
 			},
@@ -99,17 +111,18 @@ class App extends Component {
 					terciary: this.state.themeMode? Theme.textDarkTerciaryMain : Theme.textLightTerciaryMain,
 				},
 				background: {
+					paper: this.state.themeMode? Theme.bgDarkPaper: Theme.bgLightPaper,
 					default: this.state.themeMode? Theme.bgDarkPaper: Theme.bgLightPaper,
 				}
 			},
 		});
 		return(
-			<ThemeProvider theme={this.mainGridTheme}>
-				<CssBaseline />
-				<Paper square className="noScroll scroll4" sx={{height: ['auto', 'auto', '100vh'], margin: '0 auto', width: ['100%', '80%', '80%']}}>
-					<Grid container>
-						<Grid item xs={12} md={5} lg={4}>
-							<ThemeProvider theme={this.topSideGridTheme}>
+			<Paper square theme={this.topSideGridTheme} elevation={0}>
+				<Grid container className="noScroll scroll4" sx={{height: ['auto', 'auto', '100vh'], margin: '0 auto', width: ['100%', '80%', '80%']}}>
+					<CssBaseline />
+					<Grid item xs={12} md={5} lg={4}>
+						<ThemeProvider theme={this.topSideGridTheme}>
+							<Paper elevation={0} >
 								<TopSideGrid container px={[0, 0, 3]} sx={{justifyContent: 'center', height: '50px'}}>
 									<FormGroup row>
 										<FormControlLabel
@@ -132,31 +145,38 @@ class App extends Component {
 									key={this.state.showContactLinkText}
 									getHeight={this.handleGetHeight}/>
 								</TopSideGrid>
-							</ThemeProvider>
-							<ThemeProvider theme={this.bottomSideGridTheme}>
+							</Paper>
+						</ThemeProvider>
+						<ThemeProvider theme={this.bottomSideGridTheme}>
+							<Paper elevation={0} >
 								<BottomSideGrid container px={[0, 0, 3]}
 								className="scrollableSection scroll4"
-								sx={{height: ['auto','auto', `calc(100vh - ${this.buttonHeight}px - ${this.contactHeight}px)`]}}>
+								sx={{
+									minHeight: [`calc(100vh - ${this.buttonHeight}px - ${this.contactHeight}px)`, 'auto', 'auto'],
+									height: ['auto', 'auto', `calc(100vh - ${this.buttonHeight}px - ${this.contactHeight}px)`]
+									}}>
 									<SideLanguages/>
 									<SideSkills/>
 									<SideInterests/>
 								</BottomSideGrid>
-							</ThemeProvider>
-						</Grid>
+							</Paper>
+						</ThemeProvider>
+					</Grid>
+					<Grid item xs={12} md={7} lg={8}>
 						<ThemeProvider theme={this.mainGridTheme}>
-							<MainGrid item xs={12} md={7} lg={8} px={[0, 0, 3]}>
-								<Grid container className="scrollableSection scroll4" sx={{height: ['auto', 'auto', '100vh']}}>
+							<Paper elevation={0} >
+								<MainGrid container px={[0, 0, 3]} className="scrollableSection scroll4" sx={{height: ['auto', 'auto', '100vh']}}>
 									<Summary/>
 									<Education/>
 									<Experience/>
 									<Projects/>
 									<Courses/>
-								</Grid>
-							</MainGrid>
+								</MainGrid>
+							</Paper>
 						</ThemeProvider>
 					</Grid>
-				</Paper>
-			</ThemeProvider>
+				</Grid>
+			</Paper>
 		);
 	}
 }

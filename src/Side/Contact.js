@@ -23,7 +23,7 @@ class Contact extends Component {
 		return(
 			<Grid container ref={(contact) => {this.contactComponent = contact}}>
 				<Grid item xs={12} md={12} lg={12} sx={{display: 'flex', flexDirection:'column', alignItems: 'center'}}>
-					<Avatar alt="José Velarde" src={process.env.PUBLIC_URL + '/profile.jpg'} sx={{ width: 140, height: 150}}/>
+					<Avatar alt="José Velarde" src={process.env.PUBLIC_URL + '/profile.png'} sx={{ width: 140, height: 150}}/>
 				</Grid>
 				<Grid item xs={12} md={12} lg={12}>
 					<Typography variant="h4" align="center">{data.Contact['Name']} {data.Contact['Last Name']}</Typography>
@@ -38,7 +38,7 @@ class Contact extends Component {
 					<MenuList dense sx={this.props.showLinkText? { display: 'table'} : { display: 'flex', flexDirection: 'row'}}>
 						<MenuItem component="a" underline="none" href={"mailto:" + data.Contact['Email']}>
 							<ListItemIcon>
-								<SvgIcon color="error">
+								<SvgIcon>
 									<FiMail/>
 								</SvgIcon>
 							</ListItemIcon>
@@ -54,7 +54,7 @@ class Contact extends Component {
 						</MenuItem>
 						<MenuItem component="a" underline="none" href={"https://www.linkedin.com/in/" + data.Contact['Linkedin']}>
 							<ListItemIcon>
-								<SvgIcon color="primary">
+								<SvgIcon>
 									<FaLinkedin/>
 								</SvgIcon>
 							</ListItemIcon> 

@@ -76,8 +76,8 @@ class Experience extends Component {
 									</Grid>
 								)}
 								<Grid item xs={12} md={12} lg={12} py={1}>
-									<Divider textAlign="left">
-										{/* <Chip label="Stack" /> */}
+									<Divider textAlign="middle">
+										{/* <Chip label="Developed Skills" /> */}
 									</Divider>
 								</Grid>
 								{exp["Stack"].map((stack, index) =>

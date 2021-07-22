@@ -26,7 +26,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 		},
 	},
 	'& .MuiSwitch-thumb': {
-	backgroundColor: theme.palette.mode === 'dark' ? Theme.textLightTerciaryTop : Theme.bgDarkTop,
+	backgroundColor: theme.palette.mode === 'dark' ? Theme.textDarkTerciaryTop : Theme.bgDarkTop,
 	width: 30,
 	height: 30,
 	'&:before': {
@@ -45,7 +45,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 	},
 	'& .MuiSwitch-track': {
 	opacity: 1,
-	backgroundColor: theme.palette.mode === 'dark' ? Theme.textLightSecondaryTop : Theme.textDarkSecondaryTop,
+	backgroundColor: theme.palette.mode === 'dark' ? Theme.textLightSecondaryTop : 'rgba(0,0,0,0.40)',
 	borderRadius: 20 / 2,
 	},
 }));
