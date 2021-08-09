@@ -25,14 +25,6 @@ class Experience extends Component {
 			this.setState({ open: true });
 		}
 	}
-	// componentDidMount() {
-	// 	this.updateDimensions()
-		// window.addEventListener('resize', this.updateDimensions);
-	// }
-	// componentWillUnmount() {
-	// 	window.removeEventListener('resize', this.updateDimensions);
-	// }
-
 
 	render() { 
 		return (
@@ -40,7 +32,7 @@ class Experience extends Component {
 				<Grid item xs={12} md={12} lg={12}>
 					<ListItem button onClick={this.handleClick}>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
-						<Typography variant="h5" px={1} sx={{alignSelf: 'center'}}>Experience</Typography>
+						<Typography variant="h5" px={1} sx={{alignSelf: 'center', letterSpacing: '0.15rem'}}>Experience</Typography>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
 					</ListItem>
 				</Grid>
@@ -76,7 +68,7 @@ class Experience extends Component {
 									</Grid>
 								)}
 								<Grid item xs={12} md={12} lg={12} py={1}>
-									<Divider textAlign="middle">
+									<Divider textAlign="center">
 										{/* <Chip label="Developed Skills" /> */}
 									</Divider>
 								</Grid>
@@ -88,7 +80,7 @@ class Experience extends Component {
 								{index === (data.Experience.length - 1)?
 									null
 									:
-									<ColoredDivider variant="middle" width={"85%"}/>
+									<ColoredDivider variant="center" width={"85%"}/>
 								}
 							</Grid>
 						</Grid>

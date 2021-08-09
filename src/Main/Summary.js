@@ -6,18 +6,14 @@ import ColoredDivider from '../Components/ColoredDivider';
 import data from '../JoseVelarde.json'
 
 class Summary extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {  }
-	// }
-	
+
 	render() { 
 		return (  
 			<Grid container>
 				<Grid item xs={12} md={12} lg={12} sx={{display: 'flex'}}>
-					<ListItem button onClick={null}>
+					<ListItem >
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
-						<Typography variant="h5" px={1} sx={{alignSelf: 'center'}}>Summary</Typography>
+						<Typography variant="h5" px={1} sx={{alignSelf: 'center', letterSpacing: '0.15rem'}}>Summary</Typography>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
 					</ListItem>
 				</Grid>

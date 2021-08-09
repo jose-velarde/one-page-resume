@@ -9,11 +9,6 @@ import {IoLocationSharp} from 'react-icons/io5';
 import data from '../JoseVelarde.json';
 
 class Contact extends Component {
-	// constructor(props){
-	// 	super(props);
-	// 	this.state={
-	// 	}
-	// }
 	componentDidMount() {
 		this.height = this.contactComponent.clientHeight;
 		this.props.getHeight(this.height)
@@ -26,17 +21,17 @@ class Contact extends Component {
 					<Avatar alt="José Velarde" src={process.env.PUBLIC_URL + '/profile.png'} sx={{ width: 140, height: 150}}/>
 				</Grid>
 				<Grid item xs={12} md={12} lg={12}>
-					<Typography variant="h4" align="center">{data.Contact['Name']} {data.Contact['Last Name']}</Typography>
+					<Typography variant="h4" align="center" sx={{letterSpacing: '0.10rem'}}>{data.Contact['Name']} {data.Contact['Last Name']}</Typography>
 				</Grid>
 				<Grid item xs={12} md={12} lg={12}>
-					<Typography variant="h6" align="center" color="text.secondary">{data.Contact['Title']}<br/>{data.Contact['Profession']}</Typography>
+					<Typography variant="h6" align="center" color="text.secondary" >{data.Contact['Title']}<br/>{data.Contact['Profession']}</Typography>
 				</Grid>
 				<Grid item xs={12} md={12} lg={12}>
 					<Typography variant="h6" align="center" color="text.terciary"><IoLocationSharp/>{data.Contact['City']}</Typography>
 				</Grid>
 				<Grid item xs={12} md={12} lg={12} sx={{display:'flex', justifyContent: 'center'}}>
 					<MenuList dense sx={this.props.showLinkText? { display: 'table'} : { display: 'flex', flexDirection: 'row'}}>
-						<MenuItem component="a" underline="none" href={"mailto:" + data.Contact['Email']}>
+						<MenuItem component="a" underline="none" target="_blank" href={"mailto:" + data.Contact['Email']}>
 							<ListItemIcon>
 								<SvgIcon>
 									<FiMail/>
@@ -44,7 +39,7 @@ class Contact extends Component {
 							</ListItemIcon>
 							<Typography variant="body1" sx={this.props.showLinkText?  null : {display: "none"}}>{data.Contact['Email']}</Typography>
 						</MenuItem>
-						<MenuItem component="a" underline="none" href={"https://" + data.Contact['Website']}>
+						<MenuItem component="a" underline="none" target="_blank" href={"https://" + data.Contact['Website']}>
 							<ListItemIcon>
 								<SvgIcon>
 									<FaGlobe/>
@@ -52,7 +47,7 @@ class Contact extends Component {
 							</ListItemIcon> 
 							<Typography variant="body1" sx={this.props.showLinkText? null : {display: "none"}}>{data.Contact['Website']}</Typography>
 						</MenuItem>
-						<MenuItem component="a" underline="none" href={"https://www.linkedin.com/in/" + data.Contact['Linkedin']}>
+						<MenuItem component="a" underline="none" target="_blank" href={"https://www.linkedin.com/in/" + data.Contact['Linkedin']}>
 							<ListItemIcon>
 								<SvgIcon>
 									<FaLinkedin/>
@@ -60,7 +55,7 @@ class Contact extends Component {
 							</ListItemIcon> 
 							<Typography variant="body1" sx={this.props.showLinkText? null : {display: "none"}}>{data.Contact['Linkedin']}</Typography>
 						</MenuItem>
-						<MenuItem component="a" underline="none" href={"https://github.com/" + data.Contact['Github']}>
+						<MenuItem component="a" underline="none" target="_blank" href={"https://github.com/" + data.Contact['Github']}>
 							<ListItemIcon>
 								<SvgIcon>
 									<FaGithub/>

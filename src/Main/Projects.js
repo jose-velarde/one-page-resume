@@ -24,13 +24,6 @@ class Projects extends Component {
 			this.setState({ open: true });
 		}
 	}
-	// componentDidMount() {
-	// 	this.updateDimensions()
-		// window.addEventListener('resize', this.updateDimensions);
-	// }
-	// componentWillUnmount() {
-	// 	window.removeEventListener('resize', this.updateDimensions);
-	// }
 
 	render() { 
 		return (  
@@ -38,7 +31,7 @@ class Projects extends Component {
 				<Grid item xs={12} md={12} lg={12}>
 					<ListItem button onClick={this.handleClick}>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
-						<Typography variant="h5" px={1} sx={{alignSelf: 'center'}}>Projects</Typography>
+						<Typography variant="h5" px={1} sx={{alignSelf: 'center', letterSpacing: '0.15rem'}}>Projects</Typography>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
 					</ListItem>
 				</Grid>
@@ -77,7 +70,7 @@ class Projects extends Component {
 									{index === (data.Projects.length - 1)?
 										null
 										:
-										<ColoredDivider variant="middle" width={"85%"}/>
+										<ColoredDivider variant="center" width={"85%"}/>
 									}
 								</Grid>
 							</Grid>

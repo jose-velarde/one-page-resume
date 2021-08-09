@@ -25,13 +25,6 @@ class SideLanguages extends Component {
 			this.setState({ open: true });
 		}
 	}
-	// componentDidMount() {
-		// this.updateDimensions()
-		// window.addEventListener('resize', this.updateDimensions);
-	// }
-	// componentWillUnmount() {
-	// 	window.removeEventListener('resize', this.updateDimensions);
-	// }
 	
 	render() { 
 		return (  
@@ -39,7 +32,7 @@ class SideLanguages extends Component {
 				<Grid item xs={12} md={12} lg={12} sx={{display: 'flex'}}>
 					<ListItem button onClick={this.handleClick}>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
-						<Typography variant="h5" px={1} sx={{alignSelf: 'center'}}>Languages</Typography>
+						<Typography variant="h5" px={1} sx={{alignSelf: 'center', letterSpacing: '0.15rem'}}>Languages</Typography>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
 					</ListItem>
 				</Grid>
@@ -56,7 +49,7 @@ class SideLanguages extends Component {
 								{index === (data.Filler.Languages.length - 1)?
 									null
 									:
-									<Divider variant="middle"/>
+									<Divider variant="center"/>
 								}
 							</Grid>
 						</Grid>

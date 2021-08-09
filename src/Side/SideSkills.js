@@ -24,20 +24,14 @@ class SideSkills extends Component {
 			this.setState({ open: true });
 		}
 	}
-	// componentDidMount() {
-	// 	this.updateDimensions()
-		// window.addEventListener('resize', this.updateDimensions);
-	// }
-	// componentWillUnmount() {
-	// 	window.removeEventListener('resize', this.updateDimensions);
-	// }
+
 	render() { 
 		return (
 			<Grid container rowSpacing={1.5}>
 				<Grid item xs={12} md={12} lg={12} sx={{display: 'flex'}}>
 					<ListItem button onClick={this.handleClick}>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
-						<Typography variant="h5" px={1} sx={{alignSelf: 'center'}}>Skills</Typography>
+						<Typography variant="h5" px={1} sx={{alignSelf: 'center', letterSpacing: '0.15rem'}}>Skills</Typography>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
 					</ListItem>
 				</Grid>
@@ -54,7 +48,7 @@ class SideSkills extends Component {
 								{index === (data.Filler.Skills.length - 1)?
 									null
 									:
-									<Divider variant="middle"/>
+									<Divider variant="center"/>
 								}
 							</Grid>
 						</Grid>

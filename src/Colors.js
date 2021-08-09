@@ -26,18 +26,18 @@ const Colors = {
 }
 	
 const Theme = {
-	bgDarkTop: '#3b2a3f',
+	bgDarkTop: '#222233',
 	bgLightTop: 'rgb(255, 252, 201, 1)',
-	textDarkPrimaryTop: 'rgba(255,255,255,0.92)',
+	textDarkPrimaryTop: 'rgba(255,255,255,0.95)',
 	textLightPrimaryTop: 'rgb(0, 0, 0, 0.80)',
 	textDarkSecondaryTop: 'rgba(255,255,255,0.60)',
 	textLightSecondaryTop: 'rgba(0,0,0,0.70)',
 	textDarkTerciaryTop: '#ABCDFF',
 	textLightTerciaryTop: Colors.awesomeRed,
 
-	bgDarkBottom: '#3b2a3f',
+	bgDarkBottom: '#222233',
 	bgLightBottom:'rgb(255, 252, 201, 1)',
-	textDarkPrimaryBottom: 'rgba(255,255,255,0.92)',
+	textDarkPrimaryBottom: 'rgba(255,255,255,0.95)',
 	textLightPrimaryBottom: 'rgb(0, 0, 0, 0.80)',
 	textDarkSecondaryBottom: 'rgba(255,255,255,0.60)',
 	textLightSecondaryBottom: 'rgba(0,0,0,0.70)',
@@ -46,7 +46,7 @@ const Theme = {
 
 	bgDarkMain: '#2A2A3F',
 	bgLightMain: 'rgb(255, 252, 201, 0.3)',
-	textDarkPrimaryMain: 'rgba(255,255,255,0.92)',
+	textDarkPrimaryMain: 'rgba(255,255,255,0.95)',
 	textLightPrimaryMain: 'rgb(0, 0, 0, 0.80)',
 	textDarkSecondaryMain: 'rgba(255,255,255,0.60)', 
 	// '#B3B4BA',

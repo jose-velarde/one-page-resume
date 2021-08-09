@@ -6,22 +6,25 @@ Open https://jose-velarde.github.io/one-page-resume/ to view it in the browser.
 The site is designed to load all the content from json files, so if you want to set up your own resume using this layout you might be able to, by cloning the repo and modifying the json files.
 
 ## TODO
-* [] Light/Dark mode toggle. Improve Switch style
 * [x] Load info from json file.
 * [x] Side navigation 100% of viewport. Calculated on first render.
 * [x] Transition effect on background color change. Could probabably write a better component.
 * [x] Theme support. kinda, with Colors.js
-* [] Scroll clicked and uncollapsed item to the top. New component?
-* [] Professional/Short version switch. Different json?
-* [] Language Switch or switch language on click on the languages items. Different json? 
-* [] Rearrange sections on xs display, move Languages/Skills/Interests to the bottom.
-* [] Include switchs into a Nav bar menu? 
-* [] Try other palettes. Colors in website look more saturated, why tho.
-* [] More spacing on titles
+* [x] More spacing on titles
 * [x] Primary text color on inner ThemeProvider does not work, figure out how to override default text color defined by outer ThemeProvider. 
-* [] Change selected text background color on dark mode
-* [] Make reusable Components
-* [] dark mode background gradient with banding, why tho.
+* [x] Rearrange sections on xs display, move Languages/Skills/Interests to the bottom.
+* [ ] Tooltips on button links.
+* [ ] Back to top button/Nav
+* [ ] Change selected text background color on dark mode
+* [ ] Scroll clicked and uncollapsed item to the top // Collapsed/Expanded indicator.
+* [ ] Improve Switch style Light/Dark mode toggle. 
+* [ ] Language Switch or switch language on click on the languages items. Different json? 
+* [ ] Professional/Short version switch. Different json?
+* [ ] Include switchs into a Nav bar menu? 
+* [ ] Complete side section scroll instead of half
+* [ ] Try other palettes. Colors in website look more saturated, why tho.
+* [ ] Dark mode background gradient with banding, why tho.
+* [ ] Make reusable Components
 ## Things I had trouble with
 
 * Material-UI's dark/light palette selector changed from 'type' to 'mode', I'm using Material-UI next and had to read the v3 to v4 changes to figure this out.
