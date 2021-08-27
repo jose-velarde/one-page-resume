@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 
 import {Grid, Divider, Typography, Collapse, ListItem} from '@material-ui/core';
 
+import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
+
 import ColoredDivider from '../Components/ColoredDivider';
 import data from '../JoseVelarde.json';
-
+import Theme from '../Colors';
 class SideLanguages extends Component {
 	constructor(props) {
 		super(props);
@@ -34,6 +36,7 @@ class SideLanguages extends Component {
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
 						<Typography variant="h5" px={1} sx={{alignSelf: 'center', letterSpacing: '0.15rem'}}>Languages</Typography>
 						<ColoredDivider sx={{flexGrow: '1', height: '1px', alignSelf: 'center'}}/>
+						{this.state.open ? <FaMinusCircle color={Theme.textLightTerciaryTop}/> : <FaPlusCircle color={Theme.textLightTerciaryTop}/>}
 					</ListItem>
 				</Grid>
 				<Collapse in={this.state.open} timeout="auto" unmountOnExit sx={{width: '100%'}}>

@@ -14,7 +14,8 @@ The site is designed to load all the content from json files, so if you want to 
 * [x] Primary text color on inner ThemeProvider does not work, figure out how to override default text color defined by outer ThemeProvider. 
 * [x] Rearrange sections on xs display, move Languages/Skills/Interests to the bottom.
 * [ ] Tooltips on button links.
-* [ ] Back to top button/Nav
+* [ ] Back to top button/Nav.
+* [ ] Change homepage icon to portfolio.
 * [ ] Change selected text background color on dark mode
 * [ ] Scroll clicked and uncollapsed item to the top // Collapsed/Expanded indicator.
 * [ ] Improve Switch style Light/Dark mode toggle. 
