@@ -15,7 +15,7 @@ import { FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { IoLocationSharp } from "react-icons/io5";
 
-import data from "../JoseVelarde.json";
+  import data from "../JoseVelarde.json";
 
 class Contact extends Component {
   componentDidMount() {

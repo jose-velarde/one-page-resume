@@ -52,11 +52,11 @@ class SideLanguages extends Component {
             <ColoredDivider
               sx={{ flexGrow: "1", height: "1px", alignSelf: "center" }}
             />
-            {this.state.open ? (
+            {/* {this.state.open ? (
               <FaMinusCircle color={Theme.textLightTerciaryTop} />
             ) : (
               <FaPlusCircle color={Theme.textLightTerciaryTop} />
-            )}
+            )} */}
           </ListItem>
         </Grid>
         <Collapse
