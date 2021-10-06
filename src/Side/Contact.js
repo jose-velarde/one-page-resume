@@ -23,6 +23,15 @@ class Contact extends Component {
     this.props.getHeight(this.height);
   }
 
+  handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      "#courses"
+    );
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   render() {
     return (
       <Grid
@@ -109,7 +118,9 @@ class Contact extends Component {
               component="a"
               underline="none"
               target="_blank"
-              href={"https://" + data.Contact["Website"]}
+              //hardcoded
+              onClick={this.handleClick}
+              // href={"https://" + data.Contact["Website"]}
             >
               <Tooltip title="Check out my portfolio!">
                 <ListItemIcon>

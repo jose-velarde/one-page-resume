@@ -7,7 +7,7 @@
     "City": "Salta, Argentina",
     "Phone": "+55 12-98186-5664",
     "Email": "josevelarde00@gmail.com",
-    "Website": "jose-velarde.github.io",
+    "Website": "jose-velarde.github.io/one-page-resume",
     "Github": "jose-velarde",
     "Linkedin": "jose-velarde"
   },
@@ -175,6 +175,40 @@
   "Filler": {
     "Courses": [
       {
+        "ID": "0",
+        "Status": "In progress",
+        "Date": "React, Material UI, JSON generated content",
+        "Course": "One page resume template",
+        "Platform": "Website demo",
+        "url": "https://jose-velarde.github.io/one-page-resume/"
+      },
+      {
+        "ID": "1",
+        "Status": "Finished",
+        "Date": "React, Material UI, axios, Formik, Yup",
+        "Course": "Alkemy Labs - React challenge",
+        "Platform": "Website demo",
+        "url": "https://superteambuilder.netlify.app/"
+      },
+      {
+        "ID": "2",
+        "Status": "In progress",
+        "Date": "NextJS, Typescript, TailwindCSS",
+        "Course": "Basement Studio - Front-end challenge",
+        "Platform": "Website demo",
+        "url": "https://basement-challenge-silk.vercel.app/"
+      },
+      {
+        "ID": "3",
+        "Status": "Finished",
+        "Date": "MITx Platform (2017)",
+        "Course": "Introduction to Computer Science and Programming Using Python",
+        "Platform": "edX",
+        "url": "https://www.edx.org/es/course/introduction-to-computer-science-and-programming-7"
+      }
+    ],
+    "Unfinished": [
+      {
         "ID": "1",
         "Status": "In progress",
         "Date": "Full Stack open (2021)",
@@ -189,14 +223,6 @@
         "Course": "Fullstack Javascript Web Developer Program",
         "Platform": "theodinproject.com",
         "url": "https://www.theodinproject.com/about"
-      },
-      {
-        "ID": "3",
-        "Status": "Finished",
-        "Date": "MITx (2017)",
-        "Course": "Introduction to Computer Science and Programming Using Python",
-        "Platform": "edX",
-        "url": "https://www.edx.org/es/course/introduction-to-computer-science-and-programming-7"
       }
     ],
     "Languages": [

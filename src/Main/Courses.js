@@ -40,11 +40,12 @@ class Courses extends Component {
               sx={{ flexGrow: "1", height: "1px", alignSelf: "center" }}
             />
             <Typography
+              id="courses"
               variant="h5"
               px={1}
               sx={{ alignSelf: "center", letterSpacing: "0.15rem" }}
             >
-              Courses
+              Courses & Front-end Projects   
             </Typography>
             <ColoredDivider
               sx={{ flexGrow: "1", height: "1px", alignSelf: "center" }}

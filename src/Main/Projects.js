@@ -44,7 +44,7 @@ class Projects extends Component {
               px={1}
               sx={{ alignSelf: "center", letterSpacing: "0.15rem" }}
             >
-              Projects
+              Academic Projects
             </Typography>
             <ColoredDivider
               sx={{ flexGrow: "1", height: "1px", alignSelf: "center" }}
