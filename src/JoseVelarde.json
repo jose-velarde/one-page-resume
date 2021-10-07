@@ -274,9 +274,12 @@
       }
     ],
     "Interests": [
-      "Python",
-      "React",
       "Front-end",
+      "React",
+      "NextJS",
+      "Typescript",
+      "TailwindCSS",
+      "Python",
       "UI/UX",
       "Drawing",
       "Data Science",
