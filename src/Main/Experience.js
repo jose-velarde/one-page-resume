@@ -58,7 +58,7 @@ class Experience extends Component {
           unmountOnExit
           sx={{ width: "100%" }}
         >
-          {data.Experience.map((exp, index) => (
+          {this.props.experience.map((exp, index) => (
             <Grid item container key={"exp" + index} rowSpacing={0.3} px={3}>
               <Grid
                 item
@@ -160,7 +160,7 @@ class Experience extends Component {
                 my={1}
                 sx={{ display: "flex", justifyContent: "center" }}
               >
-                {index === data.Experience.length - 1 ? null : (
+                {index === this.props.experience.length - 1 ? null : (
                   <ColoredDivider variant="center" width={"85%"} />
                 )}
               </Grid>

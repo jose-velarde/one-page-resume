@@ -12,8 +12,10 @@
     "Linkedin": "jose-velarde"
   },
 
-  "Summary": "<b>Electronics Engineer</b> from the National University of Córdoba, Argentina. Space Science <b>Master's degree Student</b> at Brazil's National Institute for Space Research (INPE), developing an intense thunderstorm nowcasting software to identify the most electrically active regions, and a motion detection software to capture upper atmospheric phenomena. <br/>Specialized in programming with <b>Python</b> and, hopefully, a future data scientist. Currently located in Salta, Argentina, learning React to seek a position as a <b>Front-end web developer</b>.",
-
+  "Summary": [
+    "<b>Electronics Engineer</b> from the National University of Córdoba, Argentina. Space Science <b>Master's degree Student</b> at Brazil's National Institute for Space Research (INPE), developing an intense thunderstorm nowcasting software to identify the most electrically active regions, and a motion detection software to capture upper atmospheric phenomena. <br/>Specialized in programming with <b>Python</b> with interest in Data Science. <br/>Currently located in Salta, Argentina, learning full stack web development with React and Django to seek a position as a <b>Front-end developer</b>.",
+    "<b>Electronics Engineer</b> from the National University of Córdoba, Argentina. Space Science <b>Master's degree Student</b> at Brazil's National Institute for Space Research (INPE).<br/>Specialized in programming with <b>Python</b> with interest in Data Science. <br/>Currently located in Salta, Argentina, learning full stack web development with React and Django to seek a position as a <b>Front-end web developer</b>."
+  ],
   "Education": [
     {
       "ID": "1",
@@ -35,9 +37,7 @@
       "Tasks": [
         "I participated in an international research campaign during the development of my thesis."
       ]
-    }
-  ],
-  "School": [
+    },
     {
       "ID": "3",
       "Institution": "Vocational School Nº3138",
@@ -59,8 +59,6 @@
       "Tasks": [
         "Participated in a 5-sprint project to develop a website for the 'Somos más' ONG in a real work environment.",
         "Developed front-end sections, as well as the website back office management sections.",
-        "Developed service tools to handle communications with the project API.",
-        "Contributed to the UI design of the website.",
         "Attended daily scrum ceremonies, weekly planning/reviews as a member of the development team."
       ],
       "Stack": [
@@ -72,7 +70,6 @@
         "Bitbucket",
         "Front-end",
         "APIs",
-        "Agile metodologies",
         "Teamwork"
       ]
     },
@@ -84,15 +81,16 @@
       "Date": "Jun. 2019 - Present",
       "Tasks": [
         "Participated in field/remote research campaigns to observe convective storms and study upper atmospheric phenomena.",
-        "Developed an intense thunderstorm nowcasting software to identify electrically active regions.",
-        "Developed a motion detection software to capture short-lived optical phenomena.",
-        "Developed a GUI to handle the operation of Arduino-based motion system."
+        "Developed an intense thunderstorm nowcasting Python software to identify electrically active regions.",
+        "Developed a motion detection Python software to capture short-lived optical phenomena.",
+        "Developed a PyQT5 GUI to handle the operation of Arduino-based motion system."
       ],
       "Stack": [
         "Python",
         "OpenCV",
         "Matlab",
         "Data Processing",
+        "Image Processing",
         "Software Development",
         "Academic Research",
         "Academic Writing"
@@ -157,8 +155,7 @@
       "Tasks": [
         "2019 Campaign: Succesfully recorded upper atmospheric phenomena in video footage with equipment installed in 7 locations in Argentina and Brazil.",
         "<a href='http://www.inpe.br/noticias/noticia.php?Cod_Noticia=5284' style='color: inherit'>LEONA 2019 Campaign INPE's portal news.</a>",
-        "2020 Campaign: Processed +50 hours of recorded footage from the 2018 and 2019 campaigns.",
-        "2021 Campaign: Prepared equipment for future LEONA stations."
+        "2020 Campaign: Processed +50 hours of recorded footage from the 2018 and 2019 campaigns."
       ]
     },
     {
@@ -175,11 +172,11 @@
     }
   ],
   "Filler": {
-    "Courses": [
+    "Portfolio": [
       {
         "ID": "0",
         "Status": "In progress",
-        "Date": "React, Material UI, JSON generated content",
+        "Date": "React, Material UI",
         "Course": "One page resume template",
         "Platform": "Website demo",
         "url": "https://jose-velarde.github.io/one-page-resume/"
@@ -199,17 +196,9 @@
         "Course": "Basement Studio - Front-end challenge",
         "Platform": "Website demo",
         "url": "https://basement-challenge-silk.vercel.app/"
-      },
-      {
-        "ID": "3",
-        "Status": "Finished",
-        "Date": "MITx Platform (2017)",
-        "Course": "Introduction to Computer Science and Programming Using Python",
-        "Platform": "edX",
-        "url": "https://www.edx.org/es/course/introduction-to-computer-science-and-programming-7"
       }
     ],
-    "Unfinished": [
+    "Courses": [
       {
         "ID": "1",
         "Status": "In progress",
@@ -225,6 +214,14 @@
         "Course": "Fullstack Javascript Web Developer Program",
         "Platform": "theodinproject.com",
         "url": "https://www.theodinproject.com/about"
+      },
+      {
+        "ID": "3",
+        "Status": "Finished",
+        "Date": "MITx Platform (2017)",
+        "Course": "Introduction to Computer Science and Programming Using Python",
+        "Platform": "edX",
+        "url": "https://www.edx.org/es/course/introduction-to-computer-science-and-programming-7"
       }
     ],
     "Languages": [
@@ -264,7 +261,9 @@
         "Level": "Intermediate",
         "Learning method": "Self-taught",
         "Date": "2020"
-      },
+      }
+    ],
+    "Hobbies":[
       {
         "ID": "3",
         "Skill": "3D Modeling (Blender), Illustrations (Krita)",
@@ -274,13 +273,12 @@
       }
     ],
     "Interests": [
-      "Front-end",
       "React",
       "NextJS",
       "Typescript",
       "TailwindCSS",
       "Python",
-      "UI/UX",
+      "Django",
       "Drawing",
       "Data Science",
       "Computer Vision"

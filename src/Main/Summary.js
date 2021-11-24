@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { Grid, Typography, ListItem } from "@material-ui/core";
 
 import ColoredDivider from "../Components/ColoredDivider";
-import data from "../JoseVelarde.json";
 
 class Summary extends Component {
   render() {
@@ -29,7 +28,7 @@ class Summary extends Component {
         <Grid item xs={12} md={12} lg={12}>
           <Typography
             variant="body1"
-            dangerouslySetInnerHTML={{ __html: data.Summary }}
+            dangerouslySetInnerHTML={{ __html: this.props.summary }}
             px={3}
           ></Typography>
         </Grid>

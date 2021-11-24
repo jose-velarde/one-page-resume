@@ -89,7 +89,7 @@ class Contact extends Component {
           <MenuList
             dense
             sx={
-              this.props.showLinkText
+              this.props.showMore
                 ? { display: "table" }
                 : { display: "flex", flexDirection: "row" }
             }
@@ -109,7 +109,7 @@ class Contact extends Component {
               </Tooltip>
               <Typography
                 variant="body1"
-                sx={this.props.showLinkText ? null : { display: "none" }}
+                sx={this.props.showMore ? null : { display: "none" }}
               >
                 {data.Contact["Email"]}
               </Typography>
@@ -131,7 +131,7 @@ class Contact extends Component {
               </Tooltip>
               <Typography
                 variant="body1"
-                sx={this.props.showLinkText ? null : { display: "none" }}
+                sx={this.props.showMore ? null : { display: "none" }}
               >
                 {data.Contact["Website"]}
               </Typography>
@@ -151,7 +151,7 @@ class Contact extends Component {
               </Tooltip>
               <Typography
                 variant="body1"
-                sx={this.props.showLinkText ? null : { display: "none" }}
+                sx={this.props.showMore ? null : { display: "none" }}
               >
                 {data.Contact["Linkedin"]}
               </Typography>
@@ -171,7 +171,7 @@ class Contact extends Component {
               </Tooltip>
               <Typography
                 variant="body1"
-                sx={this.props.showLinkText ? null : { display: "none" }}
+                sx={this.props.showMore ? null : { display: "none" }}
               >
                 {data.Contact["Github"]}
               </Typography>

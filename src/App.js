@@ -32,6 +32,7 @@ import Courses from "./Main/Courses";
 import Theme from "./Colors";
 import "./App.css";
 import "fontsource-roboto";
+import JSONdata from "./JoseVelarde.json";
 
 const TopSideGrid = styled(Grid)(({ theme }) => ({
   backgroundColor:
@@ -107,17 +108,44 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showContactLinkText: false,
+      data: {
+        ...JSONdata,
+        Summary: [JSONdata.Summary[1]],
+        Education: JSONdata.Education.slice(0, 2),
+        Experience: JSONdata.Experience.slice(0, 2),
+        Projects: JSONdata.Projects.slice(0, 1),
+      },
+      showMore: false,
       themeMode: false,
       contactHeight: 0,
     };
     this.buttonHeight = 50;
+    // this.showLessData = this.showLess(JSONdata)
+    // this.lessJSONdata = {...JSONdata};
+    // this.lessJSONdata.Education = this.lessJSONdata.Education.slice(0,2)
+    // this.lessJSONdata.Experience = this.lessJSONdata.Experience.slice(0,2)
+    // this.lessJSONdata.Projects = this.lessJSONdata.Projects.slice(0,1)
   }
 
-  toggleLinkText = () => {
+  toggleShowMore = () => {
     this.setState((prevState) => ({
-      showContactLinkText: !prevState.showContactLinkText,
+      showMore: !prevState.showMore,
+      data: prevState.showMore
+        ? {
+            ...JSONdata,
+            Summary: [JSONdata.Summary[1]],
+            Education: JSONdata.Education.slice(0, 2),
+            Experience: JSONdata.Experience.slice(0, 2),
+            Projects: JSONdata.Projects.slice(0, 1),
+          }
+        : JSONdata,
     }));
+
+    // this.setState((prevState) => ({
+    //   data: !prevState.showMore? JSONdata : this.lessJSONdata
+    // }));
+
+    console.log(this.state.data);
   };
   toogleTheme = () => {
     this.setState((prevState) => ({
@@ -243,21 +271,19 @@ class App extends Component {
                   <FormControlLabel
                     control={
                       <Switch
-                        checked={this.state.showContactLinkText}
-                        onChange={() => this.toggleLinkText()}
+                        checked={this.state.showMore}
+                        onChange={() => this.toggleShowMore()}
                         name="contactLinks"
                       />
                     }
-                    label={
-                      this.state.showContactLinkText ? "Hide Info" : "Show Info"
-                    }
+                    label={this.state.showMore ? "Show Less" : "Show More"}
                   />
                 </FormGroup>
               </BottomSideGrid>
               <TopSideGrid container px={[0, 0, 3]}>
                 <Contact
-                  showLinkText={this.state.showContactLinkText}
-                  key={this.state.showContactLinkText}
+                  showMore={this.state.showMore}
+                  key={this.state.showMore}
                   getHeight={this.handleGetHeight}
                 />
               </TopSideGrid>
@@ -315,11 +341,11 @@ class App extends Component {
                   },
                 }}
               >
-                <Summary />
-                <Education />
-                <Experience />
-                <Projects />
-                <Courses />
+                <Summary summary={this.state.data.Summary[0]} />
+                <Education education={this.state.data.Education} />
+                <Experience experience={this.state.data.Experience} />
+                <Projects projects={this.state.data.Projects} />
+                <Courses portfolio={this.state.data.Filler.Portfolio} />
               </MainGrid>
             </ThemeProvider>
           </Grid>

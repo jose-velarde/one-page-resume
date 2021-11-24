@@ -45,7 +45,7 @@ class Courses extends Component {
               px={1}
               sx={{ alignSelf: "center", letterSpacing: "0.15rem" }}
             >
-              Courses & Front-end Projects   
+              Front-end Projects
             </Typography>
             <ColoredDivider
               sx={{ flexGrow: "1", height: "1px", alignSelf: "center" }}
@@ -58,7 +58,7 @@ class Courses extends Component {
           unmountOnExit
           sx={{ width: "100%" }}
         >
-          {data.Filler.Courses.map((course, index) => (
+          {this.props.portfolio.map((course, index) => (
             <Grid
               item
               container
@@ -121,7 +121,7 @@ class Courses extends Component {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={12} lg={12}>
-                {index === data.Filler.Courses.length - 1 ? null : (
+                {index === this.props.portfolio.length - 1 ? null : (
                   <Divider variant="center" />
                 )}
               </Grid>

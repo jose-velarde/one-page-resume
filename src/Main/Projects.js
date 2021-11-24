@@ -9,7 +9,6 @@ import {
 } from "@material-ui/core";
 
 import ColoredDivider from "../Components/ColoredDivider";
-import data from "../JoseVelarde.json";
 
 class Projects extends Component {
   constructor(props) {
@@ -57,7 +56,7 @@ class Projects extends Component {
           unmountOnExit
           sx={{ width: "100%" }}
         >
-          {data.Projects.map((proj, index) => (
+          {this.props.projects.map((proj, index) => (
             <Grid item container key={"proj" + index} rowSpacing={0.3} px={3}>
               <Grid
                 item
@@ -150,7 +149,7 @@ class Projects extends Component {
                   my={1}
                   sx={{ display: "flex", justifyContent: "center" }}
                 >
-                  {index === data.Projects.length - 1 ? null : (
+                  {index === this.props.projects.length - 1 ? null : (
                     <ColoredDivider variant="center" width={"85%"} />
                   )}
                 </Grid>

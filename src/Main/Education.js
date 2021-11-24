@@ -58,7 +58,7 @@ class Education extends Component {
           unmountOnExit
           sx={{ width: "100%" }}
         >
-          {data.Education.map((edu, index) => (
+          {this.props.education.map((edu, index) => (
             <Grid item container key={"edu" + index} rowSpacing={0.3} px={3}>
               <Grid
                 item
@@ -115,7 +115,7 @@ class Education extends Component {
                 </Grid>
               </Grid>
               <Grid item xs={12} md={12} lg={12}>
-                {index === data.Education.length - 1 ? null : (
+                {index === this.props.education.length - 1 ? null : (
                   <Divider variant="center" />
                 )}
               </Grid>
